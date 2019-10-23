@@ -13,8 +13,6 @@ class DbConnect{
 
         if (mysqli_connect_errno()) {
             echo "Koneksi gagal";
-        } else {
-            echo "Koneksi sukses";
         }
 
         return $this->conn;
