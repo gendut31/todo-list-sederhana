@@ -1,3 +1,28 @@
+<?php 
+  require '../include/handler.php';
+  if(isset($_POST['submit'])){
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);
+    $handler = new DbHandler();
+    $example = $handler->readData("SELECT * FROM user WHERE username= '$username' AND password = '$password'");
+    if(count($example) >= 1){
+      ?>
+        <script>
+          alert("Login Sucsess");
+          location.href='../include/example.php';
+        </script>
+      <?php
+    } else{
+        unset($_POST);
+      ?>
+      <script>
+        alert("Login Failed");
+      </script>
+    <?php
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -151,14 +176,14 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">Sign In</h5>
-            <form class="form-signin" action="" method="POST">
+            <form class="form-signin" method="POST" action="">
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <label for="inputEmail">Email address</label>
+                <input type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus name="username">
+                <label for="inputEmail">Username</label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="password">
                 <label for="inputPassword">Password</label>
               </div>
 
