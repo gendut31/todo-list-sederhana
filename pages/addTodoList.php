@@ -8,9 +8,12 @@
     <title>TODO LIST</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container mt-lg-5">
     <form>
-      <div class="form-row">
+      <div class="form-row text-center">
+        <h2 class="m-auto">Insert New Todo List</h2>
+      </div>
+      <div class="form-row mt-lg-3">
         <div class="form-group col-md-6">
           <label for="inputTitle">title</label>
           <input type="text" class="form-control" id="inputTitle" placeholder="Title">
