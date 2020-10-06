@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 ?>
     <script>
       alert("Login Sucsess");
-      location.href = '../include/example.php';
+      location.href = '../';
     </script>
   <?php
   } else {
@@ -176,7 +176,7 @@ if (isset($_POST['submit'])) {
       }
     }
   </style>
-  <title>TODO LIST</title>
+  <title>Simple Todo</title>
 </head>
 
 <body>
