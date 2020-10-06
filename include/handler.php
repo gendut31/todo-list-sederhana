@@ -69,13 +69,10 @@ class DbHandler extends DbConnect{
    *
    * @param string      $query          query will be executed
    * @param string      $successMessage message if query successfully executed
-   * @param string      $dataname       key name for data returned
-   * @param string      $queryRead      query for get the data after execute query
    *                    
    * @return array              array   query response
    */
-  public function executeQuery($query, $successMessage, $dataname, $queryRead){
-    $data = array();
+  public function executeQuery($query, $successMessage){
     $response = array();
 
     $result = $this->conn->query($query);
@@ -87,23 +84,6 @@ class DbHandler extends DbConnect{
     } else {
       $response["error"] = false;
       $response["message"] = $successMessage;
-
-      // check if need to return data
-      if($dataname != null){
-        $resultData = $this->conn->query($queryRead);
-
-        if (!$resultData) {
-          $response["error"] = true;
-          $response["message"] = "Kesalahan pada server";
-          return $response;
-        }
-
-        while ($row = $resultData->fetch_assoc()) {
-          $data[] = $this->renameArrayKeys($row);
-        }
-
-        $response["$dataname"] = $data;
-      }
     }
     return $response;
   }
