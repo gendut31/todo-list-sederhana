@@ -13,5 +13,6 @@
 </head>
 <body>
     <h1>Welcome to simple todo</h1>
+    <h2>Please try to create your list todo</h2>
 </body>
 </html>
