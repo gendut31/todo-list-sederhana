@@ -188,12 +188,12 @@ if (isset($_POST['submit'])) {
             <h5 class="card-title text-center">Sign In</h5>
             <form class="form-signin" method="POST" action="">
               <div class="form-label-group">
-                <input type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus name="username">
+                <input type="text" id="inputEmail" class="form-control" placeholder="Insert Username" required autofocus name="username">
                 <label for="inputEmail">Username</label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="password">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Insert Password" required name="password">
                 <label for="inputPassword">Password</label>
               </div>
 
