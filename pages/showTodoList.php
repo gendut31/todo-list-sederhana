@@ -48,6 +48,7 @@
           <th scope="col">Title</th>
           <th scope="col">Description</th>
           <th scope="col">Status</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
         <?php 
@@ -60,6 +61,7 @@
             <td scope="col"><?= $value['title']; ?></td>
             <td scope="col"><?= $value['description']; ?></td>
             <td scope="col"><?= $value['status'] == 0 ? "Pending" : "Done" ?></td>
+            <td scope="col"><a href="deleteTodo.php?id=<?=$value['id']?>">Delete</a></td>
           </tr>
         <?php
           }
