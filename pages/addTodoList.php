@@ -20,10 +20,10 @@
           <a class="nav-link" href="#">Insert</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Show</a>
+          <a class="nav-link" href="showTodoList.php">Show</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Logout</a>
+          <a class="nav-link" href="loginPage.php">Logout</a>
         </li>
       </ul>
     </div>
